@@ -15,11 +15,13 @@ export const Home = () => {
 
   return (
 
+
     <>
-    <main>        
+    <div className="cont-bg-hm-sect1"></div>
+    <main className="animate__animated animate__fadeIn">        
    
       <section className="f-sect-hom">
-        <div className="cont-bg-hm-sect1"></div>
+        {/* <div className="cont-bg-hm-sect1"></div> */}
         <div className="cont-welc-home">
           <div className="cont-welc-h">
             <h3 className="txt-welc-hom">WELCOME TO</h3>
@@ -27,15 +29,15 @@ export const Home = () => {
           </div>
           <p>Jasper Construction Services takes pride in bringing success to demanding construction projects with our expert knowledge, quality workmanship, and track record for safety. </p>
           <div className="cont-but-h">
-            <NavLink  to="/services/#foto2">SERVICES</NavLink>
-            <NavLink to="/employment">EMPLOYMENT</NavLink>
+            <NavLink  to="/services" className="a-bg-hov animate__animated animate__fadeIn">SERVICES</NavLink>
+            <NavLink to="/employment"  className="a-bg-hov animate__animated animate__fadeIn">EMPLOYMENT</NavLink>
           </div>
         </div>
       </section >
       <section className="s-sect-hom">
         <h3>LEARN MORE ABOUT</h3>
         <h2>OUR SERVICES</h2>
-        <Items linkImgHome={linkImgHome}/>        
+        <Items linkImgHome={linkImgHome} callHome={false}/>        
       </section>
     </main>
    

@@ -9,6 +9,7 @@ export const JasperRoutes = () => {
   return (
     <>
         <Navbar/>
+
         <div className="cont-routes">
             <Routes>
                 <Route path="home" element={<Home/>}/>
