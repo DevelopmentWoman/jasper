@@ -31,7 +31,7 @@ export const SectionContact = () => {
             </div>
             <div>
                 <h4>EMAIL</h4>
-                <NavLink>Jasper@jasperco.com</NavLink>
+                <a href="mailto:jasper@jasperco.com" target="_self">Jasper@jasperco.com</a>
             </div>
         </div>
       </div>

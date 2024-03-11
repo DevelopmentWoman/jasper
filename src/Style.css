@@ -3,22 +3,19 @@
 
 :root{
   --bg-head: rgba(39,39,39);
-  --bg-head-light: rgba(0, 0, 0, 0.618);
+  --bg-head-light: rgba(0, 0, 0, 0.518);
   --bg-nav: #ffffff;
   --clr-coral: #C33329;
   --clr-yellow: #F6BA33;
   --font-family: "Bebas Neue", sans-serif;
-  --font-family-mont:"Montserrat", sans-serif;   /* var(--font-family-mont); */
+  --font-family-mont:"Montserrat", sans-serif;  
 }
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* gap: 1rem; */
-  /* background-color: var(--bg-head); */
-
 }
 
 *{
@@ -150,12 +147,10 @@ a{
 
 
 
-.f-sect-hom{
-  height: calc(100vh - 6rem);
 
-}
 .cont-bg-hm-sect1{
-  height: 100%;
+  width: 100%;
+  height: calc(100vh - 6rem);
   background: url(../src/assets/jas-home.webp);
   background-size: cover;
   background-position: center;
@@ -238,7 +233,12 @@ a{
   background-color: var(--clr-coral);
   border: none;
   cursor: pointer;
+  transition: background .7s linear;
+}
 
+.a-bg-hov:hover{
+  background-color: var(--clr-yellow);
+  color: var(--bg-head);
 }
 
 
@@ -344,7 +344,6 @@ a{
 .copy{
   margin-bottom: 3rem;
   background-color: var(--bg-head);
-  /* background-color: var(--bg-head); */
   height:5vh;
   display: flex;
   justify-content: center;
@@ -390,17 +389,11 @@ a{
 
 
 /* --------------------------------------------------------ABOUT SECTION------------------------------------------------------------------- */
-.cont-routes{
-    /* margin-bottom: 10rem; */
-    /* overflow: hidden; */
-}
-.card-about{
 
-  /* height: 100rem; */
+.card-about{
   display: flex;
   flex-direction: column;
   gap: 2rem; 
-  /* background-color: var(--bg-nav);*/
 }
 .card-about-d{
   width: 100%;
@@ -455,17 +448,20 @@ a{
 
 }
 
-.card-text-ab{
-  /* position: absolute; */
-  padding: 0 1rem;
+.sect-inf-ab-phot{
+  display: none;
 }
 
+.card-text-ab{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.btn-contact{
+  display: none;
+}
 .card-text-ab>h3, .card-text-ab>div:nth-child(1)>h3{
-  color: var(--clr-yellow);
-  font-family: montserrat, sans-serif;
-  font-size: .8rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
+  padding: 1rem 0;
 }
 
 .card-text-ab>h1, .card-text-ab>div:nth-child(1)>h1{
@@ -497,9 +493,6 @@ a{
 
 .galery-about{
   background-color: var(--clr-yellow);
-
-  /* margin-bottom: 12rem; */
-
 }
 
 .card-gal-ab{
@@ -565,7 +558,6 @@ a{
 
 .grid-galery>div>img{
   width: 100%;
-  /* height: 100%; */
   object-fit:cover;
   user-select: none;
 }
@@ -574,27 +566,10 @@ a{
   background-repeat: no-repeat;
   background-position: center center;
 }
-.grid-galery>div:nth-child(1){
-  grid-area: 1 / 1 / 3 /3;
+.grid-galery>div:nth-child(1), .grid-galery>div:nth-child(3n+4){
+  grid-column: 1 / span 2;
 }
 
-.grid-galery>div:nth-child(2){
-  grid-area: 3 / 1 / 4 /2;
-}
-.grid-galery>div:nth-child(3){
-  grid-area: 3 / 2 / 4 /3;
-}
-.grid-galery>div:nth-child(4){
-
-  grid-area: 4/ 1 / 6 /3;
-}
-
-.grid-galery>div:nth-child(5){
-  grid-area: 6 / 1 / 7 /2;
-}
-.grid-galery>div:nth-child(6){
-  grid-area: 6 / 2 / 7 /3;
-}
 
 
 /* --------------------------------------------------SERVICES SECTION--------------------------------------------------------------------- */
@@ -681,14 +656,13 @@ a{
 
 /* --------------------------------------------------EMPLOYMET SECTION ---------------------------------------------------------------------- */
 .m-emp {
-  /* background: url(/src/assets/employment_main.webp);
+  background: url(/src/assets/employment_main.webp);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 .card-text-ab{
-  /* position: absolute; */
   display: flex;
   padding: 0 1rem;
 }
@@ -795,11 +769,17 @@ a{
     align-items: center;
   }
 
-
-  .bg-inf-cont>form>input, .bg-inf-cont>form>textarea{
+  .bg-inf-cont>form>div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-inf-cont>form>input,.bg-inf-cont>form>div>input, .bg-inf-cont>form>div>textarea{
     width: 70%;
     margin: 0 2rem;
-    padding: 1.5rem 0 1rem;
+    padding: 1.5rem 0 1rem 1rem;
     border: none;
     border-bottom: 2px solid black;
     font-family: var(--font-family-mont);
@@ -818,6 +798,13 @@ a{
     background-color: var(--clr-coral);
     cursor: pointer;
     color: var(--bg-nav);
+    transition: background .3s ease-in-out;
+    outline: none;
+  }
+
+  .bg-inf-cont>form>input[type="submit"]:hover{
+    background-color: var(--bg-head);
+    color: var(--bg-nav);
   }
 
 
@@ -826,12 +813,16 @@ a{
 
 
 
-
 @media (min-width:768px) {
+
+
     
 header{
   position: fixed;
+
 }
+
+
 .wrapp-nav{
   height: 5rem;
 }
@@ -893,73 +884,21 @@ a{
 
 
 .f-sect-hom{
-  /* overflow-x: hidden; */
-  /* position: fixed; */
-  /* height: calc(100vh - 6rem); */
-  /* background: url(../src/assets/jas-home.webp); */
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+  height: calc(100vh - 6rem);
 }
 .cont-bg-hm-sect1{
   position: fixed;
   width: 100%;
-  /* height: 100vh; */
-
-  /* height: 100%; */
-  /* z-index: -1; */
 }
 
-.cont-welc-home{
-  /* position: absolute;
-  width: 100%;
-  top: 0rem; */
-  /* background-color: transparent; */
-  /* height: 100%; */
-  /* padding: 2rem 1rem;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem; */
-  /* background-color: rgba(0, 0, 0, 0.4); */
-  /* color: var(--bg-nav); */
-}
 
-/* .cont-welc-h{
-  width: 100%;
-  
-} */
-
-.txt-welc-hom{
-  /* width: 100%;
-  margin-bottom: 1.2rem;
-  font-size: .9rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  text-align: center;
-  font-family: var(--font-family-mont); */
-}
 .cont-welc-h>h1{
-  /* width: 100%;
-  text-align: center;
-  font-family: "Bebas Neue", sans-serif; */
   font-size: 2.5rem;
-  /* font-weight: 200; */
   letter-spacing: 0.1em;
-  /* line-height: 1.4em; */
-
 }
 
 .cont-welc-home > p{
 
-  /* width: 100%;
-  text-align: center;
-  font-family: var(--font-family-mont);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal; */
-  /* line-height: 1.8em; */
   font-size: 1.1rem;
   letter-spacing: 0.03em;
 
@@ -969,24 +908,13 @@ a{
 
 .cont-but-h{
 
-  /* display: flex; */
   flex-direction: row;
   gap: 2rem;
-  /* color: var(--bg-nav); */
 
 }
 
 .cont-but-h > a{
-  /* width: 50%; */
   padding: 1rem;
-  /* align-items: center;
-  font-family: var(--font-family-mont);
-  font-size: .9rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  background-color: var(--clr-coral);
-  border: none;
-  cursor: pointer; */
   color: var(--bg-nav);
 
 }
@@ -997,48 +925,14 @@ a{
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-.s-sect-hom{
-  /* padding: 3rem 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: var(--bg-nav); */
-}
-
-.s-sect-hom>h3{
-
-  /* width: 100%;
-  text-align: center;
-  font-size: .9rem;
-  font-family: var(--font-family-mont);
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  color: #272727; */
-}
 
 .s-sect-hom>h2{
-  /* width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Bebas Neue", sans-serif; */
   font-size: 3rem;
-  /* font-weight: 400;
-  letter-spacing: 0.05em;
-  line-height: 1.4em;
-  color: var(--clr-coral); */
 
 }
 
 .s-sect-hom>h2::after,.s-sect-hom>h2::before{
-  /* width: 15%;
-  height: 1px;
-  content: '';
-  position: absolute;
-  border-top: 2px solid var(--bg-head); */
+
 }
 .s-sect-hom>h2::after{
   right: 8rem;
@@ -1060,37 +954,29 @@ a{
 
 }
 .cont-item-h>a{
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   gap: 1rem;
 }
 
 .cont-item-h>a>img{
-  width: 50%;
+  width: 25%;
 }
 
 .cont-item-h>a>h3{
-  font-size: 0.7rem;
-  /* width: 80%; */
-  /* line-height: 2em; */
-  /* letter-spacing: .15em; */
-  /* cursor: pointer;
-  text-align: center; */
-  /* font-family: var(--font-family-mont);
   font-size: 0.65rem;
-  font-weight: 400; */
-  /* color: var(--clr-yellow); */
-
 }
 
 
 
 
 /* ---------------------------------------------Footer------------------------------------------------------------------------- */
+
+footer{
+  display: none;
+}
+.copy{
+  margin-bottom: 0;
+}
 .copy-bef{
-  /* display: block; */
   height: 6rem;
   display: flex;
   justify-content: space-around;
@@ -1146,69 +1032,46 @@ a{
 /* --------------------------------------------------------ABOUT SECTION------------------------------------------------------------------- */
 
 .card-about{
-
-/* height: 100rem; */
 display: block;
-
-/* background-color: var(--bg-nav);*/
 }
 .card-about-d{
-/* width: 100%; */
 height: 30rem;
-
 }
 .cont-m-pho-lap{
   position: fixed;
   z-index: -1;
-  /* width: 100%; */
   height: 30rem;
 }
 
 
 .card-img-ab{
-/* position: absolute;
-width: 100%;
-background: url('../src/assets/about_main.webp');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center; */
+
 }
 
 
 .photo-card-all{
-/* height: 100%;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center; */
+  height: 30rem;
 }
 
 
 
 .cover-bg-photo{
-/* position: absolute;
-top: 0;
-width: 100%;
-height: 100%;
-background-color: var(--bg-head-light); */
+
 }
 
 .wrap-img-card{
-position: absolute;
-bottom: 8rem;
-right: 0rem;
-width: 70%;
-height: 15%;
-padding: 0;
-/* text-align: end; */
-/* display: block; */
-/* justify-content: end; */
-/* align-items: end; */
-
+  position: absolute;
+  width: 100%;
+  height: 30rem;
+  padding: 0;
 }
 
 .wrap-img-card>img{
-/* width: 80%; */
-height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -3.5rem;
+  width: 60%;
+  height: 40%;
 }
 
 .cont-inf-ab{
@@ -1219,46 +1082,27 @@ height: 100%;
 }
 /* /////////////////////////////////////////////////////////// */
 .card-text-ab{
-/* position: absolute; */
-height: 100%;
-/* width: 50%; */
-/* padding: 4rem; */
-background-color: var(--bg-nav);
+  height: 100%;
+  background-color: var(--bg-nav);
+  justify-content: center;
 }
 
+
+
 .card-text-ab>h3{
-/*   
-  color: var(--clr-yellow);
-  font-family: montserrat, sans-serif; */
   font-size: .7rem;
-  /* font-weight: 400;
-  letter-spacing: 0.3em; */
 }
 
 .card-text-ab>h1{
-/* margin-top: 1rem;
-color: var(--clr-coral);
-font-family: "Bebas Neue", sans-serif;
-font-size: 1.8rem;
-font-weight: 400;
-letter-spacing: 0.05em;
-line-height: 1.4em; */
+
 }
 
-.card-text-ab>div:nth-child(1)>p{
-/* /* margin-top: 1rem; */
+.card-text-ab>p{
 margin-bottom: 1.5rem;
-/*color: var(--bg-head);
-font-family: var(--font-family-mont);
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal; */
-font-size: .4rem;
-/* letter-spacing: 0.02em;
-line-height: 1.8em; */
+font-size: .6rem;
 }
 .card-text-ab>a{
-  /* margin-bottom: 2rem; */
+  display: inline;
   padding: .8rem 1.5rem;
   background-color: var(--bg-head);
   color: var(--bg-nav);
@@ -1268,21 +1112,18 @@ line-height: 1.8em; */
 
 
 
-.card-text-ab>div:nth-child(1){
+.card-text-ab{
   width: 50%;
 
 }
 
-.card-text-ab>div:nth-child(2){
+.sect-inf-ab-phot{
+  display: block;
   width: 50%;
   height: 100%;
-  /* background: url(/src/assets/employment_main.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
-.card-text-ab>div:nth-child(2)>img{
+.sect-inf-ab-phot>img{
   width: 100%;
   height: 100%;
 }
@@ -1292,53 +1133,25 @@ line-height: 1.8em; */
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .galery-about{
-/* background-color: var(--clr-yellow); */
-
-/* margin-bottom: 12rem; */
 
 }
 
 .card-gal-ab{
-/* background-color: var(--clr-yellow);
-height: 10rem; 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 1rem;  */
+
 
 }
 
 .card-gal-ab>h3{
-
-/* font-family: montserrat, sans-serif; */
 font-size: .8rem;
-/* font-weight: 400;
-letter-spacing: 0.3em; */
-
 }
 
 
 .card-gal-ab>h2{
-/* width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: "Bebas Neue", sans-serif;
-font-size: 2.2rem;
-font-weight: 400;
-letter-spacing: 0.05em;
-line-height: 1.4em; */
-
 
 }
 
 .card-gal-ab>h2::after,.card-gal-ab>h2::before{
 width: 13%;
-/* height: 1px;
-content: '';
-position: absolute;
-border-top: 2px solid var(--bg-head); */
 }
 .card-gal-ab>h2::after{
 right: 13rem;
@@ -1351,48 +1164,24 @@ left: 13rem;
 
 .grid-galery{
   padding: 0 0 4rem;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-grid-gap: 0;
-/* overflow: hidden; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
 }
 .grid-galery>div{
-/* width: 100%; */
+
 }
 
 .grid-galery>div>img{
   height: 100%;
-/* width: 100%;
-object-fit:cover;
-user-select: none; */
 }
 .grid-galery>div{
-/* background-size: cover;
-background-repeat: no-repeat;
-background-position: center center; */
+
 }
 .grid-galery>div{
 grid-area:auto !important;
 }
 
-/* .grid-galery>div:nth-child(2){
-grid-area: 0;
-}
-.grid-galery>div:nth-child(3){
-grid-area: 3 / 2 / 4 /3;
-}
-.grid-galery>div:nth-child(4){
-
-grid-area: 4/ 1 / 6 /3;
-}
-
-.grid-galery>div:nth-child(5){
-grid-area: 6 / 1 / 7 /2;
-}
-.grid-galery>div:nth-child(6){
-grid-area: 6 / 2 / 7 /3;
-} */
 
 
 /* --------------------------------------------------SERVICES SECTION--------------------------------------------------------------------- */
@@ -1407,37 +1196,28 @@ grid-area: 6 / 2 / 7 /3;
 }
 
 .g-serv-sect{
-  /* display: grid; */
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr ;
 
 }
 .card-img-ser{
 
-  /* background: url('../src/assets/grid/1.webp');
-  background-size: cover;
-  background-position: center;class="g-cont-img-serv"
-  background-repeat: no-repeat; */
 }
 
 .cont-det-g-inf{
-  /* background: url('../src/assets/layout.webp');
-  background-size: cover;
-  background-position: center; */
+
 }
 
+.wr-serv{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.wr-serv>div:nth-child(even) .img-img-full{
+  grid-area: 1 / 1 / 2 / 2;
 
+}
 
-.g-serv-sect:nth-child(2)>div:nth-child(2){
-  grid-area: 1 / 1 / 2 /2;
-}
-.g-serv-sect:nth-child(4)>div:nth-child(2){
-  grid-area: 1 / 1 / 2 /2;
-}
-.g-serv-sect:nth-child(6)>div:nth-child(2){
-  grid-area: 1 / 1 / 2 /2;
-}
 .con-bg-layout{
-  /* background-color: rgba(195,51,41,.85); */
   height: 100%;
   display: flex;
   gap: 1rem;
@@ -1447,8 +1227,6 @@ grid-area: 6 / 2 / 7 /3;
 .con-bg-layout>div{
   width: 70%;
   padding: 0;
-  /* width: 100%;
-  padding: 3rem 2.5rem; */
 }
 .con-bg-layout>div:nth-child(2){
   padding: 0 0 0 1rem;
@@ -1456,13 +1234,6 @@ grid-area: 6 / 2 / 7 /3;
 }
 .con-bg-layout>div>span{
   font-size: 1.5rem;
-  /* width: 100%;
-  display: block;
-  font-size: 1.8rem;
-  font-family: var(--font-family);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--bg-nav); */
 }
 .g-cont-img-serv{
   padding-right: 1rem;
@@ -1471,8 +1242,7 @@ grid-area: 6 / 2 / 7 /3;
 }
 
 .con-bg-layout>div>ul{
-  /* padding: 1rem 1rem;
-  color: var(--bg-nav); */
+
 }
 .con-bg-layout>div>ul>li{
   
@@ -1489,23 +1259,14 @@ grid-area: 6 / 2 / 7 /3;
   width: 100%;
   height: 100%;
 }
-/* 
-.img-img-full>img{
-  width: 100%;
-  height: 100%;
-  background-position: center center;
- 
-} */
+
 
 
 
 
 /* --------------------------------------------------EMPLOYMET SECTION ---------------------------------------------------------------------- */
 .m-emp {
-  /* background: url(/src/assets/employment_main.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+
 }
 
 .card-text-ab{
@@ -1526,85 +1287,344 @@ grid-area: 6 / 2 / 7 /3;
 }
 
 .p-lay-cont{
-  padding: 3rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 0.9rem;
-  font-family: var(--font-family-mont);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.9em;
-  letter-spacing: 0.02em;
-  color: var(--bg-nav);
+  padding: 3rem 0 3rem 4rem ;
+  font-size: 0.7rem;
 }
 
 
 .p-lay-cont>h2, .p-lay-cont>div>h4{
-  width: 100%;
-  display: block;
-  font-size: 1.8rem;
-  font-family: var(--font-family);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--bg-head);
+  font-size: 1.6rem;
   }
 
   .p-lay-cont>div>h4{
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: var(--font-family-mont);
+    font-size: .8rem;
   }
   .p-lay-cont>div{
-    margin-top: 1rem;
-    padding: 0;
+    margin-top: .3rem;
   }
 
   .p-lay-cont>div>span{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .p-lay-cont>div>a{
-    color: var(--bg-nav);
-    text-decoration-line: underline;
-    letter-spacing: .5px;
+
   }
 
 
   /* /////////////////////////////////////////////////FORM//////////////////////////////////////////////////////////////////////////// */
 
 
+  .bg-inf-cont{
+    display: flex;
+    justify-content: space-between;
 
+  }
+
+  .bg-inf-cont>.cont-det-g-inf{
+    width: 40%;
+
+  }
 
   .bg-inf-cont>form{
+    width: 60%;
     padding: 3rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
   }
 
-
-  .bg-inf-cont>form>input, .bg-inf-cont>form>textarea{
-    width: 70%;
-    margin: 0 2rem;
-    padding: 1.5rem 0 1rem;
-    border: none;
-    border-bottom: 2px solid black;
-    font-family: var(--font-family-mont);
-    font-size: 1rem;
+  .bg-inf-cont>form>div>label{
+    font-size: 0.6rem;
+  }
+  .bg-inf-cont>form>input, .bg-inf-cont>form>div>textarea{
+    /* padding: 0; */
   }
 
-  .bg-inf-cont>form>textarea{
-    padding: 1.5rem 0 3rem 1rem;
+  .d-txtarea{
+    padding: 0 2.5rem;
+    grid-column: 1 / 3;
+  }
+  .bg-inf-cont>form>div>textarea{
+    width: 100%;
+
+
   }
 
   .bg-inf-cont>form>input[type="submit"]{
-    width: 40%;
-    border: none;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: var(--clr-coral);
-    cursor: pointer;
-    color: var(--bg-nav);
+    grid-column: 1 / 3;
+    width: 30%;
+    padding: .7rem;
+
+  }
+
+  .bg-inf-cont>form>div:nth-child(3)>input{
+    border-bottom: 2px solid var(--clr-coral);
   }
     
   }
+
+
+@media (min-width:998px) {
+
+
+  
+
+    .m-l-logo{
+      margin-left: 4rem;
+    }
+    
+    .container-nav-l{
+    
+      margin: 0 4rem;
+      gap: 1rem;
+    
+    }
+
+    a{
+      font-size: .7rem;
+      color: var(--bg-head);
+    }
+
+    
+    /* ------------------------------------------MAIN HOME-------------------------------------------------- */
+    
+ 
+    .cont-bg-hm-sect1{
+      position: fixed;
+      width: 100%;
+    }
+    
+
+    
+    
+    /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    
+
+    
+
+    .s-sect-hom>h2::after{
+      right: 14rem;
+    }
+    
+    .s-sect-hom>h2::before{
+      left: 14rem;
+    }
+    
+    
+ 
+    
+    .cont-item-h>a>img{
+      width: 30%;
+    }
+    
+    
+    
+    
+    
+    /* ---------------------------------------------Footer------------------------------------------------------------------------- */
+    
+
+    .copy-bef{
+      padding: 1rem 3rem;
+      height: 7rem;
+      gap: .5rem;
+    }
+    
+    .copy-bef>div{
+      font-size: .9rem;
+    }
+
+    .copy-bef>div>div>a{
+      font-size: .8rem;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* --------------------------------------------------------ABOUT SECTION------------------------------------------------------------------- */
+    
+
+    
+    
+
+    /* /////////////////////////////////////////////////////////// */
+
+    .card-text-ab{
+      padding-left: 3rem;
+    }
+    
+    .card-text-ab>h3{
+      font-size: .8rem;
+    }
+    
+    .card-text-ab>h1{
+      font-size: 2rem;
+    }
+    
+    .card-text-ab>p{
+      font-size: .8rem;
+    }
+
+    .card-text-ab>a{
+      display: inline;
+      width: 30%;
+    }
+    
+
+ 
+    
+    /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    
+ 
+    
+    .card-gal-ab>h3{
+    font-size: .9rem;
+    }
+    
+    
+    .card-gal-ab>h2{
+      font-size: 2.5rem;
+    }
+    
+
+    .card-gal-ab>h2::after{
+    right: 17rem;
+    }
+    
+    .card-gal-ab>h2::before{
+    left: 17rem;
+    }
+    
+    
+    .grid-galery{
+      padding: 0 0 3rem;
+
+    }
+
+  
+    
+    
+    
+    /* --------------------------------------------------SERVICES SECTION--------------------------------------------------------------------- */
+  
+
+    
+
+    .con-bg-layout>div>span{
+      font-size: 1.9rem;
+    }
+
+    .con-bg-layout>div>ul>li{
+      
+      font-size: 0.9rem;
+    }
+    
+
+    
+    
+    
+    
+    
+    /* --------------------------------------------------EMPLOYMET SECTION ---------------------------------------------------------------------- */
+  
+    .card-text-ab>h1{
+      font-size: 2.5rem;
+    }
+
+    .card-text-ab>p{
+      font-size: 1rem;
+    }
+    
+    /*--------------------------------------------------CONTACT SECTION--------------------------------------------------------------------------*/
+    
+    
+
+    .p-lay-cont{
+      padding: 3rem 0 3rem 5rem ;
+      font-size: 0.8rem;
+    }
+    
+    
+    .p-lay-cont>h2, .p-lay-cont>div>h4{
+      font-size: 2rem;
+      }
+    
+      .p-lay-cont>div>h4{
+        font-size: .9rem;
+      }
+  
+    
+      .p-lay-cont>div>span{
+        font-size: 1.2rem;
+      }
+      .p-lay-cont>div>a{
+        font-size: .9rem;
+      }
+    
+    
+      /* /////////////////////////////////////////////////FORM//////////////////////////////////////////////////////////////////////////// */
+    
+    
+    
+    
+      .bg-inf-cont>form{
+        padding: 3rem 0;
+    
+      }
+
+      .d-txtarea{
+        padding: 0 3.1rem;
+
+      }
+    
+      .bg-inf-cont>form>input[type="submit"]{
+        grid-column: 1 / 3;
+        width: 30%;
+        padding: .7rem;
+    
+      }
+    
+
+}
+
+
+@media (min-width:1200px) {
+
+   
+     
+    .card-gal-ab>h2::after{
+    right: 22rem;
+    }
+    
+    .card-gal-ab>h2::before{
+    left: 22rem;
+    }
+    
+
+     
+        .s-sect-hom>h2::after{
+          right: 18rem;
+        }
+        
+        .s-sect-hom>h2::before{
+          left: 18rem;
+        }
+        
+           
+        
+   
+ 
+          .d-txtarea{
+            padding: 0 3.8rem;
+
+          }
+
+}

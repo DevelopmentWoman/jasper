@@ -42,17 +42,20 @@ const linkImgHomex=[
 export const Services = () => {
   console.log('inició')
   return (
-    <main>
+    <>
       <section className="card-about">
       <MainPhoto classAbout= "card-img-ser" imgSrc="../src/assets/SERVICES_OUR_COMPANY.webp"/>
       </section>
-      <section className="items-serv">
-        <Items linkImgHome={linkImgHomex}/>
-      </section>
-      <section className="detaill">
-        <DetailServices linkImgHome={linkImgHome}/>
-      </section>
-    </main>
+      <main className="animate__animated animate__fadeIn">
+
+        <section className="items-serv">
+          <Items linkImgHome={linkImgHomex}/>
+        </section>
+        <section className="detaill">
+          <DetailServices linkImgHome={linkImgHome}/>
+        </section>
+      </main>
+    </>
   )
 }
 

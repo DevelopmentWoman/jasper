@@ -3,7 +3,7 @@ import { useForm } from "../../hooks/useForm";
 
 
 const initLanguage=
-{firstName:'',
+{ firstName:'',
   lastName: '',
   email:'',
   phone:'',
@@ -26,6 +26,7 @@ export const FormJasper = ({onSendEmail}) => {
 
   const onSubmit = (e)=>{
     e.preventDefault();
+    console.log(lastName)
     setIsSubmited(true);
     if (!isFormValid) return
     onSendEmail(formState)
@@ -39,19 +40,26 @@ export const FormJasper = ({onSendEmail}) => {
 
   return (
     <form onSubmit={onSubmit}>
+      <div>
         <input type="text" placeholder="First Name" name='firstName'  value={firstName} onChange={onInputChange}/>
         <label style={{display:(!!firstNameValid && isSubmited)?'block':'none', color:'red' }}>{firstNameValid}</label>
-
-        <input type="text" placeholder="Last Name" name='lastName ' value={lastName} onChange={onInputChange}/>
+      </div>  
+      <div>
+        <input type="text" placeholder="Last Name" name='lastName'  value={lastName} onChange={onInputChange}/>
         <label style={{display:(!!lastNameValid && isSubmited)?'block':'none', color:'red' }}>{lastNameValid}</label>
-
-        <input type="text" placeholder="Email" name='email ' value={email} onChange={onInputChange}/>
+      </div>
+      <div>
+        <input type="text" placeholder="Email" name='email' value={email} onChange={onInputChange}/>
         <label style={{display:(!!emailValid && isSubmited)?'block':'none', color:'red' }}>{emailValid}</label>
-
+      </div>
+      <div>
         <input type="text" placeholder="Phone" name='phone' value={phone} onChange={onInputChange}/>
-
-        <textarea placeholder="Add Message" name='message ' value={message} onChange={onInputChange}></textarea>
+      </div>
+      <div className="d-txtarea">
+        <textarea placeholder="Add Message" name='message' value={message} onChange={onInputChange}></textarea>
+      </div>
         <input type="submit" value={"SEND"}/>
+
     </form>
   )
 }
