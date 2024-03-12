@@ -43,7 +43,7 @@ export const Services = () => {
   return (
     <>
 
-      <MainPhoto classAbout= "card-img-ser animate__animated animate__fadeIn" imgSrc="./assets_O_servUR_COMPANY.webp"/>
+      <MainPhoto classAbout= "card-img-ser animate__animated animate__fadeIn" imgSrc="./assets/SERVICES_OUR_COMPANY.webp"/>
 
       <main className="animate__animated animate__fadeIn">
 

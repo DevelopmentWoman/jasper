@@ -29,7 +29,7 @@ export const JasperRoutes = () => {
                 <Route path="services" element={<Services/>}/>
                 <Route path="employment" element={<Employment/>}/>
                 <Route path="contact" element={<Contact/>}/>
-                <Route path="/" element={<Navigate to="home/"/>}/>
+                <Route path="/*" element={<Navigate to="home/"/>}/>
             </Routes>
         </div>
         <div className="copy-bef">
@@ -50,14 +50,14 @@ export const JasperRoutes = () => {
           </div>
         </div>
         <div className="copy">
-          <h4>WEBSITE DESIGN BY</h4>
+          <h4>DEVELOPED BY YELITZA SUNIAGA</h4>
         </div>
         <footer>
           <div className="cont-help">
-            <div><img src="../assets/call.svg" alt="phone" /></div>
-            <div><img src="../assets/email.svg" alt="call" /></div>
-            <div><img src="../assets/location.svg" alt="location" /></div>
-            <div><img src="../assets/facebook.svg" alt="facebook" /></div>
+            <a href="tel:641-792-8650"><img src="../assets/call.svg" alt="phone" /></a>
+            <a href="mailto:jasper@jasperco.com"><img src="../assets/email.svg" alt="call" /></a>
+            <a href="http://maps.google.com/maps?daddr=928%20N%2019th%20Ave%20E,%20Newton,%20IA%2050208,%20USA" target="_blank"><img src="../assets/location.svg" alt="location" /></a>
+            <a href="https://www.facebook.com/Jasper-Construction-Services-Inc-725502960919438/" target="_blank"><img src="../assets/facebook.svg" alt="facebook" /></a>
           </div>
         </footer>
 

@@ -17,7 +17,7 @@ export const Employment = () => {
             Please send or drop off paper applications to 928 North 19th Avenue East, Newton, Iowa 50208.
             </p>
           </div>
-          <div className='sect-inf-ab-phot'><img src="./assets/grid/2.webp" alt="" /></div>
+          <div className='sect-inf-ab-phot'><img src="./assets/2_grid.webp" alt="" /></div>
         </div>
       </section>
     </main>

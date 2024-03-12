@@ -375,7 +375,7 @@ a{
   display: flex;
   z-index: 10;
 }
-.cont-help>div{
+.cont-help>a{
   height: 100%;
   width: 25%;
   border-right:1px solid rgba(255, 255, 255, 0.163);
@@ -384,7 +384,7 @@ a{
   align-items: center;
 }
 
-.cont-help>div>img{
+.cont-help>a>img{
   width: 50%;
   height: 50%;
 }
@@ -600,7 +600,7 @@ a{
 }
 .card-img-ser{
 
-  background: url('./assets/grid/1.webp');
+  background: url('./assets/1_grid.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
