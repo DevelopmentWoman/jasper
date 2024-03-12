@@ -9,14 +9,17 @@ export const Items = ({linkImgHome, callHome=true}) => {
     <div className="cont-item-h">
         {linkImgHome.map(el=> 
           callHome ?
-          <Link  key={el.id} smooth={true} to={el.id}> 
+          <Link  smooth={true} to={`${el.id}`}> 
               <img src={`${el.url}`}/>
               <h3>{el.subtitle}</h3>
+
           </Link>
           :
-          <NavLink  key={el.id} to="/services"> 
-            <img src={`${el.url}`}/>
-            <h3>{el.subtitle}</h3>
+          <NavLink key={el.id} to="/services"> 
+
+              <img src={`${el.url}`}/>
+              <h3>{el.subtitle}</h3>
+
           </NavLink>
         )}
     </div>

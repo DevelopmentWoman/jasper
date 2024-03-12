@@ -6,9 +6,9 @@ export const DetailServices = ({linkImgHome}) => {
     <div className="wr-serv">
         {
         linkImgHome.map(el=>  
-        <Element name={el.id} className="g-serv-sect">
+        <Element  className="g-serv-sect" name={el.id}>
             {/* <div key={el.id} className="wr-serv"> */}
-                <div className="cont-det-g-inf">
+                <div className="cont-det-g-inf" key={el.id}>
                     <div className="con-bg-layout">
                         <div className="g-cont-img-serv"><img className="g-img-sev" src={`${el.url}`} alt="services"  /></div>
                         <div>
