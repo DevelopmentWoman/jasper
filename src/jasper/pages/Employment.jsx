@@ -4,7 +4,7 @@ import { MainPhoto } from '../components/MainPhoto'
 export const Employment = () => {
   return (
     <>
-    <MainPhoto classAbout= "m-emp" imgSrc="../src/assets/EMPLOYMENT_OUR_COMPANY.webp"/>
+    <MainPhoto classAbout= "m-emp animate__animated animate__fadeIn" imgSrc="../src/assets/EMPLOYMENT_OUR_COMPANY.webp"/>
     <main className="animate__animated animate__fadeIn">
       <section className="card-about">
         <div className="cont-inf-ab">

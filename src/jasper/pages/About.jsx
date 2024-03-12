@@ -7,9 +7,9 @@ export const About = () => {
 
   return (
     <>
-    <MainPhoto classAbout= "card-img-ab" imgSrc="../src/assets/ABOUT_OUR_COMPANY.webp"/>
+    <MainPhoto classAbout= "card-img-ab animate__animated animate__fadeIn" imgSrc="../src/assets/ABOUT_OUR_COMPANY.webp"/>
     <main className="animate__animated animate__fadeIn">
-      <section className="card-about">
+      <section className="card-about animate__animated animate__fadeIn">
 
 
           <div className="cont-inf-ab">

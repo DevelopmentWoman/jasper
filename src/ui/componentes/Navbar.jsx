@@ -2,9 +2,9 @@ import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 
 
-export const Navbar = () => {
+export const Navbar = ({rMenu, setRMenu}) => {
 
-    const [rMenu, setRMenu] = useState(false)
+
 
     const onClickMenu = ()=>{
         setRMenu(!rMenu);

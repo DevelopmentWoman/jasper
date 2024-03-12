@@ -3,11 +3,11 @@ import { Items } from "../components/Items"
 
 const initUrl = "../src/assets/"
 const linkImgHome=[
-  {id:1, url: `${initUrl}truck1_yellow.webp`, subtitle: `CONCRETE PAVING & FLATWORK`},
-  {id:2, url: `${initUrl}bridge_yellow.svg`, subtitle: 'BRIDGE REHABILITATION'},
-  {id:3, url: `${initUrl}tub_yellow.webp`, subtitle: 'UNDERGROUND UTILITIES. SITEWORK, & BOX CULVERTS'},
-  {id:4, url: `${initUrl}truck2_yellow.webp`, subtitle: 'TRUCKING & AGGREGATE SALES'},
-  {id:5, url: `${initUrl}truck3_yellow.webp`, subtitle: 'EQUIPMENT RENTAL & SUPPLIES'},
+  {id:1, url: `${initUrl}truck1_black.webp`, subtitle: `CONCRETE PAVING & FLATWORK`},
+  {id:2, url: `${initUrl}bridge_black.svg`, subtitle: 'BRIDGE REHABILITATION'},
+  {id:3, url: `${initUrl}tub_black.webp`, subtitle: 'UNDERGROUND UTILITIES. SITEWORK, & BOX CULVERTS'},
+  {id:4, url: `${initUrl}truck2_black.webp`, subtitle: 'TRUCKING & AGGREGATE SALES'},
+  {id:5, url: `${initUrl}truck3_black.webp`, subtitle: 'EQUIPMENT RENTAL & SUPPLIES'},
 ]
 
 

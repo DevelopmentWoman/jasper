@@ -13,7 +13,7 @@ const initValidation=
 {
   firstName: [(value)=> value.length>1, 'The first name field must contain at least 2 characters' ],
   lastName: [(value)=> value.length>1, 'The last name field must contain at least 2 characters' ],
-  email: [(value)=> value.includes('.@'), 'the email field is not valid']
+  email: [(value)=> /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(value), 'the email field is not valid']
 }
 
 
@@ -26,7 +26,7 @@ export const FormJasper = ({onSendEmail}) => {
 
   const onSubmit = (e)=>{
     e.preventDefault();
-    console.log(lastName)
+    // console.log(formState)
     setIsSubmited(true);
     if (!isFormValid) return
     onSendEmail(formState)
@@ -58,8 +58,9 @@ export const FormJasper = ({onSendEmail}) => {
       <div className="d-txtarea">
         <textarea placeholder="Add Message" name='message' value={message} onChange={onInputChange}></textarea>
       </div>
+      <div className="d-inp-subm">
         <input type="submit" value={"SEND"}/>
-
+      </div>
     </form>
   )
 }

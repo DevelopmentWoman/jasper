@@ -31,21 +31,20 @@ const linkImgHome=[
 
 const initUrlx = "../src/assets/"
 const linkImgHomex=[
-  {id:1, url: `${initUrlx}truck1_yellow.webp`, subtitle: `CONCRETE PAVING & FLATWORK`},
-  {id:2, url: `${initUrlx}bridge_yellow.svg`, subtitle: 'BRIDGE REHABILITATION'},
-  {id:3, url: `${initUrlx}tub_yellow.webp`, subtitle: 'UNDERGROUND UTILITIES. SITEWORK, & BOX CULVERTS'},
-  {id:4, url: `${initUrlx}truck2_yellow.webp`, subtitle: 'TRUCKING & AGGREGATE SALES'},
-  {id:5, url: `${initUrlx}truck3_yellow.webp`, subtitle: 'EQUIPMENT RENTAL & SUPPLIES'},
+  {id:1, url: `${initUrlx}truck1_black.webp`, subtitle: `CONCRETE PAVING & FLATWORK`},
+  {id:2, url: `${initUrlx}bridge_black.svg`, subtitle: 'BRIDGE REHABILITATION'},
+  {id:3, url: `${initUrlx}tub_black.webp`, subtitle: 'UNDERGROUND UTILITIES. SITEWORK, & BOX CULVERTS'},
+  {id:4, url: `${initUrlx}truck2_black.webp`, subtitle: 'TRUCKING & AGGREGATE SALES'},
+  {id:5, url: `${initUrlx}truck3_black.webp`, subtitle: 'EQUIPMENT RENTAL & SUPPLIES'},
 ]
 
 
 export const Services = () => {
-  console.log('inició')
   return (
     <>
-      <section className="card-about">
-      <MainPhoto classAbout= "card-img-ser" imgSrc="../src/assets/SERVICES_OUR_COMPANY.webp"/>
-      </section>
+
+      <MainPhoto classAbout= "card-img-ser animate__animated animate__fadeIn" imgSrc="../src/assets/SERVICES_OUR_COMPANY.webp"/>
+
       <main className="animate__animated animate__fadeIn">
 
         <section className="items-serv">

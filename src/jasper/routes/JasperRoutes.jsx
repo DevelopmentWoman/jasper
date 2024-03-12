@@ -1,14 +1,26 @@
-import { NavLink, Navigate, Route, Routes } from "react-router-dom"
+import { NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom"
 import { Navbar } from "../../ui"
 import { About, Contact, Services,Employment, Home } from "../pages"
-import { useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 
 
 export const JasperRoutes = () => {
+  const location = useLocation();
+  const [rMenu, setRMenu] = useState(false);
+
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (screen.width < 768) rMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible' 
+    console.log(screen.width)
+  }, [rMenu])
+  
 
   return (
     <>
-        <Navbar/>
+        <Navbar rMenu={rMenu} setRMenu={setRMenu}/>
 
         <div className="cont-routes">
             <Routes>
@@ -38,7 +50,7 @@ export const JasperRoutes = () => {
           </div>
         </div>
         <div className="copy">
-          <h4>WEBSITE DESIGN BY YELITZA SUNIAGA</h4>
+          <h4>WEBSITE DESIGN BY</h4>
         </div>
         <footer>
           <div className="cont-help">
