@@ -6,7 +6,7 @@ export const Contact = () => {
   return (
     <>      
 
-    <MainPhoto classAbout= "card-img-cont" imgSrc="./assets/CONTACT_OUR_COMPANY.webp"/>
+    <MainPhoto classAbout= "card-img-cont animate__animated animate__fadeIn" imgSrc="./assets/CONTACT_OUR_COMPANY.webp"/>
     <main className="animate__animated animate__fadeIn">
 
       <section className="sect-sec-cont">

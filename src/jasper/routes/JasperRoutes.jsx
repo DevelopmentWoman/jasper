@@ -7,14 +7,12 @@ import { useEffect, useLayoutEffect, useState } from "react"
 export const JasperRoutes = () => {
   const location = useLocation();
   const [rMenu, setRMenu] = useState(false);
-
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
   }, [location.pathname]);
 
   useEffect(() => {
     if (screen.width < 768) rMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible' 
-    console.log(screen.width)
   }, [rMenu])
   
 
@@ -29,7 +27,7 @@ export const JasperRoutes = () => {
                 <Route path="services" element={<Services/>}/>
                 <Route path="employment" element={<Employment/>}/>
                 <Route path="contact" element={<Contact/>}/>
-                <Route path="/*" element={<Navigate to="home/"/>}/>
+                <Route path="/" element={<Navigate to="home/"/>}/>
             </Routes>
         </div>
         <div className="copy-bef">
