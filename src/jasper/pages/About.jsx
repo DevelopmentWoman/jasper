@@ -7,7 +7,7 @@ export const About = () => {
 
   return (
     <>
-    <MainPhoto classAbout= "card-img-ab animate__animated animate__fadeIn" imgSrc="../src/assets/ABOUT_OUR_COMPANY.webp"/>
+    <MainPhoto classAbout= "card-img-ab animate__animated animate__fadeIn" imgSrc="./assets/ABOUT_OUR_COMPANY.webp"/>
     <main className="animate__animated animate__fadeIn">
       <section className="card-about animate__animated animate__fadeIn">
 
@@ -22,7 +22,7 @@ export const About = () => {
                 <NavLink to={"/contact"} className={"btn-contact"}>CONTACT</NavLink>
 
             </div>
-            <div className="sect-inf-ab-phot"><img src="../src/assets/grid/1.webp" alt="" /></div>
+            <div className="sect-inf-ab-phot"><img src="./assets/1_grid.webp" alt="" /></div>
           </div>
       </section>
       <section className="galery-about">
@@ -31,12 +31,12 @@ export const About = () => {
           <h2>PAST WORK</h2>
         </div>
         <div className="grid-galery">
-          <div><img src="../src/assets/grid/1.webp"  /></div>
-          <div><img src="../src/assets/grid/2.webp"  /></div>
-          <div><img src="../src/assets/grid/3.webp"  /></div>
-          <div><img src="../src/assets/grid/4.webp"  /></div>
-          <div><img src="../src/assets/grid/5.webp"  /></div>
-          <div><img src="../src/assets/grid/6.webp"  /></div>
+          <div><img src="./assets/1_grid.webp"  /></div>
+          <div><img src="./assets/2_grid.webp"  /></div>
+          <div><img src="./assets/3_grid.webp"  /></div>
+          <div><img src="./assets/4_grid.webp"  /></div>
+          <div><img src="./assets/5_grid.webp"  /></div>
+          <div><img src="./assets/6_grid.webp"  /></div>
 
         </div>
       </section>

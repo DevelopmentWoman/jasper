@@ -20,7 +20,7 @@ export const Navbar = ({rMenu, setRMenu}) => {
         <div className="wrapp-nav">
             <div className="logo">
                 <Link to="/" className="m-l-logo">
-                    <img src="../src/assets/logo.webp" alt="Logo"/>
+                    <img src="../assets/logo.webp" alt="Logo"/>
                 </Link>
             </div>
 

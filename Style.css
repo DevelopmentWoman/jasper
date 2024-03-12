@@ -100,7 +100,7 @@ a{
   margin-right: 1rem;
   width: 2rem;
   height: 2rem;
-  background: url(../src/assets/menu.svg);
+  background: url(./assets/menu.svg);
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -120,7 +120,7 @@ a{
 .url-togg {
 
   padding: 0;
-  background: url(../src/assets/close.svg);
+  background: url(./assets/close.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ a{
 .cont-bg-hm-sect1{
   width: 100%;
   height: calc(100vh - 6rem);
-  background: url(../src/assets/jas-home.webp);
+  background: url(./assets/jas-home.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -375,7 +375,7 @@ a{
   display: flex;
   z-index: 10;
 }
-.cont-help>div{
+.cont-help>a{
   height: 100%;
   width: 25%;
   border-right:1px solid rgba(255, 255, 255, 0.163);
@@ -384,7 +384,7 @@ a{
   align-items: center;
 }
 
-.cont-help>div>img{
+.cont-help>a>img{
   width: 50%;
   height: 50%;
 }
@@ -413,7 +413,7 @@ a{
 .card-img-ab{
   position: absolute;
   width: 100%;
-  background: url('../src/assets/about_main.webp');
+  background: url('./assets/about_main.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -600,14 +600,14 @@ a{
 }
 .card-img-ser{
 
-  background: url('../src/assets/grid/1.webp');
+  background: url('./assets/1_grid.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .cont-det-g-inf{
-  background: url('../src/assets/layout.webp');
+  background: url('./assets/layout.webp');
   background-size: cover;
   background-position: center;
 }
@@ -665,7 +665,7 @@ a{
 
 /* --------------------------------------------------EMPLOYMET SECTION ---------------------------------------------------------------------- */
 .m-emp {
-  background: url(/src/assets/employment_main.webp);
+  background: url(./assets/employment_main.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -716,7 +716,7 @@ a{
   background-color: var(--bg-nav);
 }
 .card-img-cont {
-  background: url(/src/assets/CONTACT_main.webp);
+  background: url(./assets/CONTACT_main.webp);
   background-size: cover;
   background-position: center;
 }
@@ -789,17 +789,21 @@ a{
     width: 70%;
     margin: 0 2rem;
     padding: 1.5rem 0 1rem 1rem;
-    border: none;
+    border: 0;
     border-bottom: 2px solid black;
     font-family: var(--font-family-mont);
     font-size: 1rem;
+    outline: none;
+
+  }
+
+  .bg-inf-cont>form>div>input:active{
+    outline: none;
   }
 
   .bg-inf-cont>form>textarea{
     padding: 1.5rem 0 3rem 1rem;
   }
-
- 
   .bg-inf-cont>form>div>input[type="submit"]{
     width: 40%;
     border: none;
@@ -810,6 +814,7 @@ a{
     color: var(--bg-nav);
     transition: background .3s ease-in-out;
     outline: none;
+    cursor: pointer;
   }
 
   .bg-inf-cont>form>div>input[type="submit"]:hover{
@@ -901,7 +906,7 @@ a{
 .cont-bg-hm-sect1{
   width: 100%;
   height: calc(100vh - 6rem);
-  background: url(../src/assets/jas-home.webp);
+  background: url(./assets/jas-home.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -916,7 +921,7 @@ a{
   height: calc(100vh - 6rem);
 }
 .cont-bg-hm-sect1{
-  background: url(../src/assets/jas-home-desk.webp);
+  background: url(./assets/jas-home-desk.webp);
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -1251,7 +1256,7 @@ grid-area:auto !important;
 
 .card-img-ser{
 
-  background: url('../src/assets/services_main_drsk.webp');
+  background: url('./assets/services_main_drsk.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1315,7 +1320,7 @@ grid-area:auto !important;
 
 /* --------------------------------------------------EMPLOYMET SECTION ---------------------------------------------------------------------- */
 .m-emp {
-  background: url(/src/assets/employment_main_desk.webp);
+  background: url(./assets/employment_main_desk.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1328,7 +1333,7 @@ grid-area:auto !important;
   background-color: var(--bg-nav);
 }
 .card-img-cont {
-  background: url(/src/assets/CONTACT_main.webp);
+  background: url(./assets/CONTACT_main_desk.webp);
   background-size: cover;
   background-position: center;
 }
@@ -1599,11 +1604,11 @@ grid-area:auto !important;
     
     /*--------------------------------------------------CONTACT SECTION--------------------------------------------------------------------------*/
     
-    .card-img-cont {
+    /* .card-img-cont {
       background: url(/src/assets/CONTACT_main_desk.webp);
       background-size: cover;
       background-position: center;
-    }
+    } */
 
     .p-lay-cont{
       padding: 3rem 0 3rem 5rem ;
