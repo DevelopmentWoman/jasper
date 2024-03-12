@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { Items } from "../components/Items"
 
-const initUrl = "../src/assets/"
+const initUrl = "../assets/"
 const linkImgHome=[
   {id:1, url: `${initUrl}truck1_black.webp`, subtitle: `CONCRETE PAVING & FLATWORK`},
   {id:2, url: `${initUrl}bridge_black.svg`, subtitle: 'BRIDGE REHABILITATION'},

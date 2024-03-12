@@ -33,7 +33,7 @@ export const JasperRoutes = () => {
             </Routes>
         </div>
         <div className="copy-bef">
-          <div><img src="../src/assets/white_logo.webp" alt="logo"/></div>
+          <div><img src="../assets/white_logo.webp" alt="logo"/></div>
           <div>
             <div><span className="s-copy-b">P:</span><span>641-792-8650</span></div>
             <div><span className="s-copy-b">F:</span><span>641-792-7088</span></div>
@@ -45,8 +45,8 @@ export const JasperRoutes = () => {
             <span>Newton, IA 50208</span>
           </div>
           <div>
-            <a href="https://www.facebook.com/Jasper-Construction-Services-Inc-725502960919438/" target="_blank"><img src="../src/assets/facebook.svg" alt="" /></a>
-            <a href=""><img src="../src/assets/youtube.svg" alt="" /></a>
+            <a href="https://www.facebook.com/Jasper-Construction-Services-Inc-725502960919438/" target="_blank"><img src="../assets/facebook.svg" alt="" /></a>
+            <a href=""><img src="../assets/youtube.svg" alt="" /></a>
           </div>
         </div>
         <div className="copy">
@@ -54,10 +54,10 @@ export const JasperRoutes = () => {
         </div>
         <footer>
           <div className="cont-help">
-            <div><img src="../src/assets/call.svg" alt="phone" /></div>
-            <div><img src="../src/assets/email.svg" alt="call" /></div>
-            <div><img src="../src/assets/location.svg" alt="location" /></div>
-            <div><img src="../src/assets/facebook.svg" alt="facebook" /></div>
+            <div><img src="../assets/call.svg" alt="phone" /></div>
+            <div><img src="../assets/email.svg" alt="call" /></div>
+            <div><img src="../assets/location.svg" alt="location" /></div>
+            <div><img src="../assets/facebook.svg" alt="facebook" /></div>
           </div>
         </footer>
 
