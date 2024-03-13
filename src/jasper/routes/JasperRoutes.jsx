@@ -50,7 +50,7 @@ export const JasperRoutes = () => {
           </div>
         </div>
         <div className="copy">
-          <h4>DEVELOPED BY YELITZA SUNIAGA</h4>
+          <h4>JASPER CONSTRUCTION - 2024</h4>
         </div>
         <footer>
           <div className="cont-help">
