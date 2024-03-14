@@ -14,7 +14,6 @@ export const JasperRoutes = () => {
 
   useEffect(() => {
     if (screen.width < 768) rMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible' 
-    console.log(screen.width)
   }, [rMenu])
   
 

@@ -2,6 +2,7 @@ import { MainPhoto } from "../components/MainPhoto"
 import { SectionContact } from "../components/SectionContact"
 
 
+
 export const Contact = () => {
   return (
     <>      
