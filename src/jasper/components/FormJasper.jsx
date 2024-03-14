@@ -17,6 +17,7 @@ const initValidation=
 }
 
 
+let url = "http://localhost:5000/send_email"
 
 export const FormJasper = ({onSendEmail}) => {
 
@@ -24,12 +25,38 @@ export const FormJasper = ({onSendEmail}) => {
   let [isSubmited,setIsSubmited] = useState(false);
 
 
+  const callGet = async ()=> {
+    try {
+
+
+      const resp = await fetch(`${url}?email=${email}`)
+      const data = await resp.json();
+      if(!resp.ok){
+          const err = {
+              err:true,
+              status: resp.status || "00",
+              statusText: resp.statusText || "Ocurrió un error",
+        }
+         throw new Error(err);
+
+      }   
+
+      alert( "email sended successfull")
+
+
+    } catch (error) {
+      alert('An error ocurred, try it again')
+    }
+
+   }
+
+
+
   const onSubmit = (e)=>{
     e.preventDefault();
-    // console.log(formState)
     setIsSubmited(true);
     if (!isFormValid) return
-    onSendEmail(formState)
+    callGet()
     onReset(e)
     setIsSubmited(false);
     
