@@ -24,7 +24,7 @@ export const FormJasper = () => {
 
   const {firstName,lastName, email,phone,message, formState, onInputChange, onReset, isFormValid, firstNameValid, lastNameValid, emailValid} = useForm(initLanguage,initValidation);
   let [isSubmited,setIsSubmited] = useState(false);
-  let [response, setResponse] = useState([false,'',0])
+  let [response, setResponse] = useState('')
   let [isLoading,setLoading] = useState(false)
   const contAlert = useRef()
  
@@ -46,18 +46,19 @@ export const FormJasper = () => {
         }
          throw new Error(err);
       }   
-      setResponse([true,"Email sended successfull",0])
+      setResponse("Email sended successfull")
     } catch (error) {
-      setResponse([true,"An error ocurred, try it again",1])
+      setLoading(false)
+      setResponse("An error ocurred, try it again")
     }
 
    }
 
 
    const onHidden = ()=>{
-    setResponse([false,''])
+    setResponse('')
     contAlert.current.classList.remove('show');
-    // document.body.style.overflow = 'visible'
+    document.body.style.overflow = 'visible'
    }
 
   const onSubmit = (e)=>{
@@ -66,7 +67,7 @@ export const FormJasper = () => {
     if (!isFormValid) return
     setLoading(true)
     callGet()
-    // document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
     onReset(e)
     setIsSubmited(false);
     
@@ -100,10 +101,13 @@ export const FormJasper = () => {
           <input type="submit" value={"SEND"}/>
         </div>
       </form>
-      <div className={isLoading ? "modal show":"modal hidden"} ref={contAlert} >
+      <div className={isLoading || response[0] ? "modal show":"modal hidden"} ref={contAlert} >
         {isLoading && <div className= "loader"></div>}
-        {!isLoading && <span className={response[2]===1 ? "sp-modal red":"sp-modal"}>{response}</span>}
-        {!isLoading && <input type="button"  value="Aceptar" onClick={onHidden}/>}
+        { response && <div className="messag">
+          {<span className={"sp-modal"}>{response}</span>}
+          {<input type="button"  value="Accept" onClick={onHidden}/>}
+        </div>}
+
       </div>
     </>
   )
