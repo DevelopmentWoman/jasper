@@ -7,8 +7,7 @@ export const useForm = (initValue={}, initValidations={}) => {
   let [formValidations, setFormValidations] = useState({})
 
 
-    useEffect(() => {
-     
+    useEffect(() => {     
       setFormState(initValue)
     }, [initValue])
     
