@@ -18,7 +18,7 @@ const initValidation=
 }
 
 
-let url = "http://localhost:5000/send_email"
+let url = "contact.php"
 
 export const FormJasper = () => {
 
@@ -35,10 +35,24 @@ export const FormJasper = () => {
   const callGet = async ()=> {
 
     try {
-      const resp = await fetch(`${url}?email=${email}&first_name=${firstName}&last_name=${lastName}&phone=${phone}&message=${message}`)
+      const params = {
+        "email": email,
+        "firstName": firstName,
+        "lastName":lastName,
+        "phone":phone || '',
+        'message':message || '',
+      }
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(params)
+      }
+      const resp = await fetch(`${url}`,options)
       const data = await resp.json();
       setLoading(false)
-      if(!resp.ok){
+      if(!data){
           const err = {
               err:true,
               status: resp.status || "00",
