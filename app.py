@@ -20,9 +20,9 @@ app.config['MAIL_PORT'] = 587
 
 app.config['MAIL_USE_TLS'] = True
 
-app.config['MAIL_USERNAME'] = "ysuniaga1981@gmail.com"
+app.config['MAIL_USERNAME'] = ""
 
-app.config['MAIL_PASSWORD'] = "abgkzxvjfuctdkfp"
+app.config['MAIL_PASSWORD'] = ""
 
 mail = Mail(app)
 
@@ -73,7 +73,7 @@ def send_email():
 
 	msg_title = "This is a test email"
 	sender = "noreply@app.com"
-	msg = Message(msg_title,sender=sender,recipients=['ysuniaga1981@gmail.com'])
+	msg = Message(msg_title,sender=sender,recipients=[])
 	msg_body = "This is the email body"
 	msg.body = f"Contact person information: \n"\
 			   f"Full name: {data_rec['first_name']} {data_rec['last_name']} \n"\
