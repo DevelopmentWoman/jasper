@@ -63,7 +63,7 @@ export const FormJasper = () => {
       setResponse("Email sended successfull")
     } catch (error) {
       setLoading(false)
-      setResponse("An error ocurred, try it again")
+      setResponse(error.statusText)
     }
 
    }
