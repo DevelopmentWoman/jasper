@@ -56,7 +56,7 @@ export const FormJasper = () => {
           const err = {
               err:true,
               status: resp.status || "00",
-              statusText: resp.statusText || "Ocurrió un error",
+              statusText: resp.statusText || "An error ocurred, try it again",
         }
          throw err;
       }   
