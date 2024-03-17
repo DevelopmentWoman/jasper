@@ -58,7 +58,7 @@ export const FormJasper = () => {
               status: resp.status || "00",
               statusText: resp.statusText || "Ocurrió un error",
         }
-         throw new Error(err);
+         throw err;
       }   
       setResponse("Email sended successfull")
     } catch (error) {
