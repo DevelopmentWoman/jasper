@@ -101,7 +101,7 @@ export const FormJasper = () => {
           <label style={{display:(!!emailValid && isSubmited)?'block':'none', color:'red' }}>{emailValid}</label>
         </div>
         <div>
-          <input type="text" placeholder="Phone" name='phone' value={phone} onChange={onInputChange}/>
+          <input type="number" placeholder="Phone" name='phone' value={phone} onChange={onInputChange}/>
         </div>
         <div className="d-txtarea">
           <textarea placeholder="Add Message" name='message' value={message} onChange={onInputChange}></textarea>
