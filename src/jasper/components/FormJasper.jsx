@@ -18,7 +18,7 @@ const initValidation=
 }
 
 
-let url = "http://localhost/contact.php"
+let url = "contact.php"
 
 export const FormJasper = () => {
 
