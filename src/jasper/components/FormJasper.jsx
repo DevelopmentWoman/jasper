@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { useForm } from "../../hooks/useForm";
-import { useLocation } from "react-router-dom";
+
 
 
 const initLanguage=
@@ -18,7 +18,7 @@ const initValidation=
 }
 
 
-let url = "contact.php"
+let url = "http://localhost/contact.php"
 
 export const FormJasper = () => {
 
@@ -26,31 +26,26 @@ export const FormJasper = () => {
   let [isSubmited,setIsSubmited] = useState(false);
   let [response, setResponse] = useState('')
   let [isLoading,setLoading] = useState(false)
+  const miForm = useRef()
   const contAlert = useRef()
  
 
 
 
 
-  const callGet = async ()=> {
+  const callGet = async (e)=> {
 
     try {
-      const params = {
-        "email": email,
-        "firstName": firstName,
-        "lastName":lastName,
-        "phone":phone || '',
-        'message':message || '',
-      }
+
+      const params = new FormData(e.target)
+
       const options = {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params)
+        body: params,
       }
       const resp = await fetch(`${url}`,options)
       const data = await resp.json();
+
       setLoading(false)
       if(!data){
           const err = {
@@ -80,7 +75,7 @@ export const FormJasper = () => {
     setIsSubmited(true);
     if (!isFormValid) return
     setLoading(true)
-    callGet()
+    callGet(e)
     document.body.style.overflow = 'hidden'
     onReset(e)
     setIsSubmited(false);
@@ -92,7 +87,7 @@ export const FormJasper = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} ref={miForm}>
         <div>
           <input type="text" placeholder="First Name" name='firstName'  value={firstName} onChange={onInputChange}/>
           <label style={{display:(!!firstNameValid && isSubmited)?'block':'none', color:'red' }}>{firstNameValid}</label>
@@ -115,7 +110,7 @@ export const FormJasper = () => {
           <input type="submit" value={"SEND"}/>
         </div>
       </form>
-      <div className={isLoading || response[0] ? "modal show":"modal hidden"} ref={contAlert} >
+      <div className={isLoading || response ? "modal show":"modal hidden"} ref={contAlert} >
         {isLoading && <div className= "loader"></div>}
         { response && <div className="messag">
           {<span className={"sp-modal"}>{response}</span>}
