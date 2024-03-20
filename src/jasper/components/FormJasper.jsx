@@ -26,7 +26,6 @@ export const FormJasper = () => {
   let [isSubmited,setIsSubmited] = useState(false);
   let [response, setResponse] = useState('')
   let [isLoading,setLoading] = useState(false)
-  const miForm = useRef()
   const contAlert = useRef()
  
 
@@ -87,7 +86,7 @@ export const FormJasper = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit} ref={miForm}>
+      <form onSubmit={onSubmit}>
         <div>
           <input type="text" placeholder="First Name" name='firstName'  value={firstName} onChange={onInputChange}/>
           <label style={{display:(!!firstNameValid && isSubmited)?'block':'none', color:'red' }}>{firstNameValid}</label>
