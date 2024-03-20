@@ -45,7 +45,7 @@ export const JasperRoutes = () => {
           </div>
           <div>
             <a href="https://www.facebook.com/Jasper-Construction-Services-Inc-725502960919438/" target="_blank"><img src="../assets/facebook.svg" alt="" /></a>
-            <a href=""><img src="../assets/youtube.svg" alt="" /></a>
+            <a href=""><img src="../assets/instagram.svg" alt="" /></a>
           </div>
         </div>
         <div className="copy">
